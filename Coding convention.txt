@@ -1,0 +1,105 @@
+1) Indentation
+	Use tabs instead of spaces.
+
+	In switch statement you must align the switch and its subordinate case labels in the same column instead of double-indenting the case labels.
+
+	Don't put multiple statements on a single line.
+	Don't put multiple assignments on a single line either.
+
+	Don't leave whitespace at the end of lines.
+
+2) Breaking long lines and strings
+	The limit on the length of lines is 80 columns.
+
+3) Placing braces
+	if(x) {
+		// do sth
+	}
+
+	instead of:
+
+	if(x)
+	{
+		// do sth
+	}
+
+	Always put braces even for single instruction inside it.
+
+	Declaring pointers:
+		char *ptr;
+		instead of:
+		char* ptr;
+
+4) Naming
+	For variables and typedefs of fundamentals types: camelCase
+		But in case of simple typedefs try to do the type name one word.
+
+	For structs' typedefs: CamelCase
+
+	Use typedefs for all structs' definitions.
+
+	Never use typedefs for pointers.
+
+5) Functions
+	In source files separate functions with one blank line.
+
+	If the function is exported, the EXPORT macro for it should follow immediately after the closing function brace line.
+
+	In function prototypes, include parameter names with their data types.
+
+	Use goto statement if you need to exit in function from multiple locations and some common work such as cleanup has to be done.
+	If there is no cleanup needed then just return directly.
+
+	Don't use inline for functions that have more than three lines of code.
+
+	Functions can return values of many different kinds, and one of the most common is a value indicating whether the function succeeded or failed.
+	Such a value can be represented as an error-code integer (-Exxx = failure, 0 = success) or a succeeded boolean (0 = failure, non-zero = success).
+	Follow this rule to have the best distinction between these two types of return values:
+		If the name of a function is an action or an imperative command,
+		the function should return an error-code integer.  If the name
+		is a predicate, the function should return a "succeeded" boolean.
+	For example: addWork() should return 0/-Exxx but isPciDevicePresent() should return 0/non-zero.
+
+6) Data structures
+	Data structures that have visibility outside the single-threaded environment they are created and destroyted in should always have reference counts.
+
+	Reference counting means that you can avoid locking, and allows multiple users to have access to the data structure in parallel - and not having to worry about the structure suddenly going away from under them just because they slept or did something else for a while.
+
+	Note that locking is not a replacement for reference counting. Locking is used to keep data structures coherent, while reference counting is a memory management technique.
+
+7) Macros and enums
+	Names of macros defining constants and labels in enums are capitalized.
+
+	Enums are preferred when defining several related constants.
+
+	Macros with multiple statements should be enclosed in a do-while block: do { // macro } while(0)
+
+	Don't write macros that affect control flow (for example with returns).
+	Don't write macros that depend on having a local variable with a magic name.
+
+	Macros defining constants using expressions must enclose the expression in parentheses.
+
+8) Kernel messages
+	Kernel messages don't have to be terminated with a period.
+
+9) Allocating memory
+	The preferred form for passing a size of a struct is the following:
+		p = (SomeStruct *) kmalloc(SomeStruct, ...);
+
+	Casting the return value which is void pointer is redundant, but do this for readability.
+
+10) Inline assembly
+	You can and should poke hardware from C when possible but in some situations you need to use inline assembly.
+
+	Consider writing simple helper functions that wrap common bits of inline assembly.
+	Large assembly functions should go in .S files, with corresponding C prototypes defined in C header files. The C prototypes for assembly function should use asmlinkage.
+
+	You may need to mark your asm statement as volatile, to prevent GCC from removing it if GCC doesn't notice any side effects.
+
+11) Documentation
+	Write Doxygen's documentation near all functions (in headers and in sources) and near all structs.
+
+	Static functions - private to the file where they are defined are not needed to be documented in Doxygen's documentation, only by simple one line comment for developers.
+
+	In function prototypes, include parameter names with their data types.
+	
