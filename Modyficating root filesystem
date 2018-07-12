@@ -1,0 +1,21 @@
+If you want to modyficate content of Javelin's root filesystem for f.e. add some files/programs to it do the following:
+
+Mount the rootfs image as loopback device:
+sudo kpartx -a javelinRootFS.img
+
+Mount the loopback device to some directories (there are 2 partitions):
+    At first partition (64 MB) there is Javelin's native rootfs.
+    At second partition (64 MB) there is empty partition.
+mkdir someDir1
+mkdir someDir2
+sudo mount /dev/mapper/someLoopback1 someDir1
+sudo mount /dev/mapper/someLoopback2 someDir2
+
+Now modificate the file system by modyficating the directories: someDir1, someDir2.
+
+Now you must umount previously mounted Javelin's rootfs and loopback device:
+sudo umount /dev/mapper/someLoopback1
+sudo umount /dev/mapper/someLoopback2
+sudo kpartx -d javelinRootFS.img
+
+Now you have properly modyficated rootfs.

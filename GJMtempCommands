@@ -1,0 +1,20 @@
+gcc -Iinclude -g -m32 -fno-builtin -fno-stack-protector -fomit-frame-pointer -fstrength-reduce -o sched.o -c kernel/scheduler.c
+ld -m elf_i386 -r -o kernel.o sched.o
+as --32 -o head.o x86/startKernel.S
+ld -m elf_i386 -Ttext 0 -e kernelStart head.o kernel.o -o system.o
+cp -f system.o system.tmp
+strip system.tmp
+objcopy -O binary -R .note -R .comment system.tmp
+
+as --32 -o boot.o x86/boot.S
+ld -m elf_i386 -Ttext 0 -o boot boot.o
+objcopy -R .pdr -R .comment -R .note -S -O binary boot
+
+as --32 -o setup.o x86/setup.S
+ld -m elf_i386 -Ttext 0 -o setup setup.o
+objcopy -R .pdr -R .comment -R .note -S -O binary setup
+
+dd if=boot bs=512 count=1 of=Image
+if=setup seek=1 bs=512 count=4 of=Image
+dd if=system.tmp seek=5 bs=512 count=$((2888-1-4)) of=Image
+qemu-system-x86_64 -m 16M -fda Image

@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Javelin.dir/main.c.o  -o Javelin 
