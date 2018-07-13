@@ -1,0 +1,2 @@
+Every contributor is specified in following format:
+Name, Surname, Nick on post list, Email, Responsibilities, What he has done
