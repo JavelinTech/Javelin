@@ -1,0 +1,4 @@
+Kernel initialization is covered in init/initKernel.c.
+	1. Initialization of root device. We're setting floppy disk as the root device.
+	2. We're extracting the 32-bit hard disk parameter table
+	3. Initialization of memory management(size, location, addresses and MemoryMap structure) in kernel.
