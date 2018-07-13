@@ -1,0 +1,27 @@
+Boot process of Javelin at x86 architecture:
+
+x86/boot.S - bootsector:
+	Load setup.S directly after the bootblock
+	Load rest of system(startKernel.S + whole kernel Image) at 0x10000
+	Go to x86/setup.S
+
+x86/setup.S - get system data from BIOS and pass them to kernel through memory, inits CPU:
+	Get current cursor position, memory size in KB, video-card data, hd0 data, hd1 data from BIOS and save it in some positions in memory
+	Turn off interrupts
+	Relocate the code to 0x0000
+	Load empty IDT and temporary GDT
+	Enable A20
+	Reprogram PIC controller
+	Switch to protected mode
+	Go to x86/startKernel.S
+
+x86/startKernel.S - kernel startup code, end of initialization CPU:
+	Reload segment registers
+	Setup kernel stack
+	Set real GDT and IDT (with default ISRs)
+	Setup page directory at 0x0000
+	Setup paging (identity-mapping first 16 MB) - page directory and 4 page tables at the starting position of physical memory. Then all 4 page tables are cleared and successively point to the last second page.
+	Setup CR3 and enable paging by Paging bit in CR0.
+	Go to init/initKernel.c
+
+init/initKernel.c - kernel initialization code - initializes kernel's subsystems.
