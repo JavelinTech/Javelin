@@ -12,7 +12,7 @@ LDFLAGS += -Ttext 0 -e kernelStart
 CFLAGS += -Iinclude
 CPP += -Iinclude
 
-SUBSYSTEMS = kernel/kernel.o
+SUBSYSTEMS = kernel/kernel.o fs/fs.o mm/mmLinked.o
 
 DRIVERS =
 
@@ -52,6 +52,12 @@ x86/startKernel.o : x86/startKernel.S
 
 kernel/kernel.o :
 	make -C kernel
+
+fs/fs.o :
+	make -C fs
+
+mm/mmLinked.o :
+	make -C mm
 
 lib/lib.a:
 	make -C lib

@@ -10,6 +10,6 @@
 /*
  * Offset from start of struct the member of type type
  */
-#define offsetOf(type, member)  ((size_t) &((type *) 0)->member)
+#define OFFSET_OF(type, member)  ((size_t) &((type *) 0)->member)
 
 #endif //JAVELIN_KERNEL_H
