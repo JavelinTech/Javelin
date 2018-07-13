@@ -1,0 +1,18 @@
+Javelin makes heavy usage of GNU Make to automatically building itself.
+
+There is main Makefile in root directory that have few intersting rules:
+	1) all (just make) - produces Javelin which is bootable Javelin's image (only Javelin - without any rootfs or ramdisk).
+	2) qemu (make qemu) - runs last Javelin image on qemu emulator.
+	3) clean (make clean) - cleans after last Javelin's build.
+
+Javelin uses nested Makefile system, that means every major directory with source code has its own Makefile - nested Makefile. All nested Makefiles must have its own OBJECTS variable that specifies object files connected to current directory and clean rule to clean after itself (only build results from current directory).
+
+All Makefiles must define depedencies for every source file in this format:
+	# depedencies
+	file.o : file.c
+
+There is Makefile.header in root directory that specifies toolchain used to build Javelin.
+
+For every nested Makefile there must be link to it in main Makefile as follows:
+	kernel/kernel.o :
+		make -C kernel		# translated to make all in kernel directory
