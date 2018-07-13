@@ -15,6 +15,6 @@ ld -m elf_i386 -Ttext 0 -o setup setup.o
 objcopy -R .pdr -R .comment -R .note -S -O binary setup
 
 dd if=boot bs=512 count=1 of=Image
-if=setup seek=1 bs=512 count=4 of=Image
+dd if=setup seek=1 bs=512 count=4 of=Image
 dd if=system.tmp seek=5 bs=512 count=$((2888-1-4)) of=Image
 qemu-system-x86_64 -m 16M -fda Image
