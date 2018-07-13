@@ -1,0 +1,29 @@
+To contribute to Javelin you must respect code convention rules and contribution rules.
+
+Changes to Javelin must be send by git patches by pull requests. First you must clone Javelin's repository, push changes to it and then make a pull request to official repository.
+
+After you sent the patch, the patch will be posted to the post list, and developers on that list reply with any comments they may have.
+
+After positively review by community, patch must be finally accepted by gjm(known also as Jockiee on github) before adding it to official repository.
+
+If the patch will be finally accepted the post at the post list which described this patch will be edited and at the end of that post will be added note which tells that patch was accepted.
+
+Great deal of Javelin development work is done by way of public "post list" at official website.
+
+For every Javelin's new version there is official CHANGELOG on post list.
+
+There are a few categories of posts at the post list:
+	1) [PATCH][NickOfSender]
+	2) [CHANGELOG][Version]
+
+Sending the patch:
+	1. Obtain a current source tree.
+	2. Describe your changes.
+	3. Separate each logical change into a separate patch.
+	4. Check your code if it's correct with Javelin's coding conventions.
+	5. If patch size uncompressed exceeds 300 KB in size, it's preferred that you store your patch on a 3rd party file hosting service, and provide a URL pointing to your patch.
+	6. Always respond to review comments under yours patch post on post list.
+	7. Send mail with PATCH in subject to Javelin's main team at address: javelintechcom@gmail.com.
+	8. Sign your work in code (headers of files).
+
+All kernel code must be portable between x86 and ARM architectures.
