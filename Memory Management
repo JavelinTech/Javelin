@@ -10,3 +10,13 @@ Initializing:
 		Every user process has its private page tables.
 		There is CR3 set to point to page directory.
 		There is paging bit in CR0 set to 1.
+	in init/initKernel.c in function main():
+		There are three types of memory:
+			1) memory occupied by kernel
+			2) main memory for processes
+			3) buffer memory - data transfer between the OS and peripherals
+		We're setting there size, location and management mode of these three different regions in the memory.
+		We're setting MemoryMap kernel structure. By this structure, the system will manage the memory above 1 MB in paging mode and keep the reference number of each page.
+		There are two different paging methods:
+			1) In kernel, the linear address and physical address are exactly the same and mapped one by one.
+			2) In user-space, the linear address differs from the physical address and there is no relationship between them.
