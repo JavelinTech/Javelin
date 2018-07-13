@@ -1,0 +1,12 @@
+Initializing:
+	in x86/startKernel.S in function setPaging():
+		Program places the page directory and four page tables at the starting position of the physical memory.
+		The memory space amounting to five pages from the starting position is clear.
+		At next program clears the space the page directory and four page tables share and 			then sets the first four entries of the page directory in order to make them point to 			four page tables.
+		After setting the page directory, the range of addressing expands to 0xFFFFFF - 16 MB.
+		The last item where the pg3 + 4902 points refers to the last page in the range.
+		Then all four page tables are cleared from the high address to the low address and successively point to the pages of memory from the high address to the low address.
+		All these four page tables belong to the kernel privately.
+		Every user process has its private page tables.
+		There is CR3 set to point to page directory.
+		There is paging bit in CR0 set to 1.
