@@ -6,13 +6,13 @@ CPP += -I../include
 
 OBJECTS = superblock.o
 
-.c.s:
+.c.S:
 	@$(CC) $(CFLAGS) -S -o $*.s $<
 
 .c.o:
 	@$(CC) $(CFLAGS) -c -o $*.o $<
 
-.s.o:
+.S.o:
 	$(AS) -o $*.o $<
 
 fs.o : $(OBJECTS)

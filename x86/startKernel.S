@@ -1,9 +1,10 @@
 # kernel startup code - 32-bit environment
+.globl IDT, GDT, noDMAFloppyArea        # exporting to kernel
+.globl pageDirectory
 
 .text
 pageDirectory:     # this code will be overwriten by the page directory
 
-.globl pageDirectory
 .globl kernelStart
 kernelStart:
 	movl $0x10,%eax

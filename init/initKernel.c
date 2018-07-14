@@ -3,6 +3,8 @@
 //
 
 #include <javelin/fs.h>
+#include <javelin/kernel.h>
+#include <javelin/mm.h>
 
 #define UPPER_MEMORY_KB     (*(unsigned short *) 0x90002)       // memory upper 1 MB in KB
 
@@ -53,6 +55,7 @@ void main() {
      */
 
     mainMemoryManagementInit(mainMemoryStart, mainMemoryEnd);
+    setIDTHandlers();
 
     for(;;)
         ;

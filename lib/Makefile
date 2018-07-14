@@ -5,10 +5,10 @@ CPP += -I../include
 
 OBJECTS = ctype.o errno.o
 
-.c.s:
+.c.S:
 	$(CC) $(CFLAGS) -S -o $*.s $<
 
-.s.o:
+.S.o:
 	$(AS) -o $*.o $<
 
 .c.o:

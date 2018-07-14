@@ -5,11 +5,11 @@ LDFLAGS += -r
 CFLAGS += -I../include
 CPP += -I../include
 
-OBJECTS = scheduler.o
+OBJECTS = scheduler.o idt.o idtExceptions.o syscalls.o
 
-.c.s:
+.c.S:
 	$(CC) $(CFLAGS) -S -o $*.s $<
-.s.o:
+.S.o:
 	$(AS) -o $*.o $<
 .c.o:
 	$(CC) $(CFLAGS) -c -o $*.o $<
@@ -21,3 +21,6 @@ clean :
 	rm -f *.o *.a
 
 scheduler.s scheduler.o: scheduler.c
+idt.s idt.o: idt.c
+idtExceptions.o: idtExceptions.S
+syscalls.o: syscalls.S

@@ -12,4 +12,9 @@
  */
 #define OFFSET_OF(type, member)  ((size_t) &((type *) 0)->member)
 
+/**
+ * Sets up exceptions' handlers and default ISR for hardware interrupts.
+ */
+void setIDTHandlers();
+
 #endif //JAVELIN_KERNEL_H

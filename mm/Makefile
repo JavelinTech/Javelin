@@ -4,15 +4,15 @@ LDFLAGS += -r
 CFLAGS += -I../include
 CPP += -I../include
 
-OBJECTS = mm.o
+OBJECTS = mm.o pageFault.o
 
-.c.s:
+.c.S:
 	@$(CC) $(CFLAGS) -S -o $*.s $<
 
 .c.o:
 	@$(CC) $(CFLAGS) -c -o $*.o $<
 
-.s.o:
+.S.o:
 	$(AS) -o $*.o $<
 
 mmLinked.o : $(OBJECTS)
@@ -22,3 +22,4 @@ clean :
 	rm -f *.o *.a
 
 mm.o : mm.c
+pageFault.o : pageFault.S
