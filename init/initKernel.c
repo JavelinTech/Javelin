@@ -7,6 +7,7 @@
 #include <javelin/mm.h>
 
 #include <javelin/block.h>      // only for init, without defining MAJOR_DEVICE_NUMBER
+#include <javelin/char.h>
 
 #define UPPER_MEMORY_KB     (*(unsigned short *) 0x90002)       // memory upper 1 MB in KB
 
@@ -59,6 +60,7 @@ void main() {
     mainMemoryManagementInit(mainMemoryStart, mainMemoryEnd);
     setIDTHandlers();
     blockDeviceInit();
+    charDeviceInit();
 
     for(;;)
         ;
