@@ -14,7 +14,7 @@ CPP += -Iinclude
 
 SUBSYSTEMS = kernel/kernel.o fs/fs.o mm/mmLinked.o
 
-DRIVERS =
+DRIVERS = drivers/drivers.o
 
 MATH =
 
@@ -62,6 +62,9 @@ mm/mmLinked.o :
 lib/lib.a:
 	make -C lib
 
+drivers/drivers.o:
+	make -C drivers
+
 x86/setup: x86/setup.S
 	make setup -C x86
 
@@ -74,7 +77,7 @@ qemu : Javelin
 clean :
 	rm -f Javelin x86/boot x86/setup
 	rm -f init/*.o system x86/*.o
-	for i in x86 lib kernel fs mm; do make clean -C $$i; done
+	for i in x86 lib kernel drivers fs mm; do make clean -C $$i; done
 
 # depedencies
 init/initKernel.o : init/initKernel.c

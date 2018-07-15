@@ -10,20 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbb79607-23db-4efc-97a5-63f3e8afdc22" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/include/asm/hardwareServices.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/javelin/hardwareStructures.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/idt.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/idtExceptions.S" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/syscalls.S" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mm/pageFault.S" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Block devices layer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/blockDeviceInit.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/charDeviceInit.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/javelin/block.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/fs/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/javelin/kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/javelin/kernel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init/initKernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/init/initKernel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/mm/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x86/startKernel.S" beforeDir="false" afterPath="$PROJECT_DIR$/x86/startKernel.S" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,92 +29,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="idt.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="idt.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kernel/idt.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="121" column="27" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
+            <state relative-caret-position="330">
+              <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hardwareStructures.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/javelin/hardwareStructures.h">
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drivers/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kernel.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/javelin/kernel.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageFault.S" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mm/pageFault.S">
+      <file leaf-file-name="types.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/types.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+            <state relative-caret-position="150">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hardwareServices.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/asm/hardwareServices.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mm/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/x86/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="syscalls.S" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kernel/syscalls.S">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="idtExceptions.S" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kernel/idtExceptions.S">
+      <file leaf-file-name="initKernel.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init/initKernel.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="startKernel.S" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/x86/startKernel.S">
+      <file leaf-file-name="Block devices layer" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Block devices layer">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="75">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="charDeviceInit.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drivers/charDeviceInit.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fs/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -156,7 +141,6 @@
         <option value="$PROJECT_DIR$/Makefile.header" />
         <option value="$PROJECT_DIR$/fs/superblock.c" />
         <option value="$PROJECT_DIR$/include/javelin/fs.h" />
-        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/include/javelin/mm.h" />
         <option value="$PROJECT_DIR$/mm/mm.c" />
         <option value="$PROJECT_DIR$/include/javelin/hardwareStructures.h" />
@@ -164,7 +148,6 @@
         <option value="$PROJECT_DIR$/init/idtExceptions.c" />
         <option value="$PROJECT_DIR$/kernel/syscalls.S" />
         <option value="$PROJECT_DIR$/mm/pageFault.S" />
-        <option value="$PROJECT_DIR$/init/initKernel.c" />
         <option value="$PROJECT_DIR$/mm/Makefile" />
         <option value="$PROJECT_DIR$/kernel/Makefile" />
         <option value="$PROJECT_DIR$/lib/Makefile" />
@@ -173,6 +156,12 @@
         <option value="$PROJECT_DIR$/x86/startKernel.S" />
         <option value="$PROJECT_DIR$/kernel/idtExceptions.S" />
         <option value="$PROJECT_DIR$/kernel/idt.c" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/drivers/Makefile" />
+        <option value="$PROJECT_DIR$/init/initKernel.c" />
+        <option value="$PROJECT_DIR$/drivers/blockDeviceInit.c" />
+        <option value="$PROJECT_DIR$/include/javelin/block.h" />
+        <option value="$PROJECT_DIR$/Block devices layer" />
       </list>
     </option>
   </component>
@@ -190,7 +179,7 @@
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -200,13 +189,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Javelin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Javelin" type="462c0819:PsiDirectoryNode" />
+              <item name="drivers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
@@ -259,6 +252,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,32 +309,33 @@
       <workItem from="1531409411695" duration="7127000" />
       <workItem from="1531418831129" duration="8945000" />
       <workItem from="1531494555552" duration="15622000" />
-      <workItem from="1531590222975" duration="6941000" />
+      <workItem from="1531590222975" duration="7592000" />
+      <workItem from="1531676328861" duration="3461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38693000" />
+    <option name="totallyTimeSpent" value="42805000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
+    <frame x="67" y="25" width="927" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24703345" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="7" visible="true" weight="0.32910052" />
+      <window_info anchor="bottom" id="CMake" order="11" visible="true" weight="0.32979852" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32910052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.045502644" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.045502644" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39894179" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32910052" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32979852" />
@@ -354,41 +349,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/init/initKernel.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/x86/setup.S">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2535">
-          <caret line="169" column="12" selection-start-line="169" selection-start-column="12" selection-end-line="169" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/x86/startKernel.S">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/x86/boot.S">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.c" />
     <entry file="file://$PROJECT_DIR$/main.c" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
@@ -449,13 +413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/types.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/stdarg.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -474,13 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -515,13 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/javelin/kernel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/errno.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -529,24 +472,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kernel/exceptionHandlers.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/exceptionHandlers.c" />
     <entry file="file://$PROJECT_DIR$/kernel/scheduler.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init/initKernel.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -561,20 +491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fs/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kernel/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -599,9 +515,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kernel/idt.o">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/idt.o" />
     <entry file="file://$PROJECT_DIR$/x86/startKernel.S">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -611,8 +525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/asm/hardwareServices.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        <state relative-caret-position="270">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -644,10 +558,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fs/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/charDeviceInit.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/initKernel.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/javelin/kernel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/types.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/blockDeviceInit.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kernel/idt.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="121" column="27" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
+        <state relative-caret-position="330">
+          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/javelin/block.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="e#1470#1803#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Block devices layer">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>

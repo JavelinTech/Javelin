@@ -1,0 +1,8 @@
+In include/javelin/block.h:
+    Every block device has its own entry in blockDevices array.
+    Element of this array are BlockDevice structure's instances and every element describes one block device (device request function and request object).
+    Every process can communicate with a block device using the buffer in host's memory.
+    Request management structure deviceRequests[32] is a data structure for reading and writing, which is a bridge between buffer block in the Javelin's buffer and logical block in a block device.
+    Requests are in queue.
+
+    Read operations always go before write operations.

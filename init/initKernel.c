@@ -6,6 +6,8 @@
 #include <javelin/kernel.h>
 #include <javelin/mm.h>
 
+#include <javelin/block.h>      // only for init, without defining MAJOR_DEVICE_NUMBER
+
 #define UPPER_MEMORY_KB     (*(unsigned short *) 0x90002)       // memory upper 1 MB in KB
 
 #define BOOT_ROOT_DEVICE         (*(unsigned short *) 0x901FC)       // root device - we're reading from bootsector's memory
@@ -56,6 +58,7 @@ void main() {
 
     mainMemoryManagementInit(mainMemoryStart, mainMemoryEnd);
     setIDTHandlers();
+    blockDeviceInit();
 
     for(;;)
         ;
