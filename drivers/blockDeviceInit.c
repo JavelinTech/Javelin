@@ -4,7 +4,7 @@
 
 #include <types.h>
 
-#include <javelin/block.h>              // only for data structures, without defining MAJOR_DEVICE_NUMBER
+#include <javelin/drivers/block.h>              // only for data structures, without defining MAJOR_DEVICE_NUMBER
 
 BlockDevice blockDevices[NUMBER_OF_DEVICES] = {
         {NULL, NULL},               // no device - reserved

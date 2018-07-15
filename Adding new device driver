@@ -1,0 +1,32 @@
+Every device driver must have its own directory in driver directory.
+In this directory you must provide directoryInit.c and Makefile. In include/javelin/drivers add header with the same name as driver's directory.
+
+Result object file of driver must be at exactly the same name as driver's directory name.
+
+Makefile in driver's directory must provide clean rule and rule that produces driver's object result file.
+
+Now edit Makefile in drivers directory and add rule that will produce your driver's object:
+    directoryName/directoryName.o
+        make -C directoryName
+    and to clean rule between in and ; add your driver's directory name.
+    in OBJECTS add at the end of variable: directoryName/directoryName.o
+
+Every directoryInit.c must provide at the most minimalistic configuration the directoryInit() function that will initialize the device driver.
+Regardless of the type of driver you can include javelin/drivers/char.h or javelin/drivers/block.h to yours driver's files (of course other headers too).
+
+The last step is invoke initialization of yours driver when Javelin is booting. To achieve this in init/initKernel.c include your driver's header file and call in main() function directoryNameInit() function.
+
+In case of creating the block device's driver you must as last step go to javelin/drivers/block.h and provide block layer driver's contract specified by:
+    /**
+     * Every block device must have this type of construction here:
+     *
+     * #if (MAJOR_DEVICE_NUMBER == numberOfThisDevice)              // MAJOR_DEVICE_NUMBER > 0
+     *  #define DEVICE_NAME "name"
+     *  #define DEVICE_ISR deviceISR           <------ optional - not every device has its own interrupt
+     *  #define DEVICE_REQUEST requestFunction
+     *  #define DEVICE_NUMBER(device) logicalNumberOfDevice
+     *  #define DEVICE_ON(device) switchDeviceOn
+     *  #define DEVICE_OFF(device) switchDeviceOff
+     * #endif
+     */
+     in this file.

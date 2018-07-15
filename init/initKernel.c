@@ -6,8 +6,13 @@
 #include <javelin/kernel.h>
 #include <javelin/mm.h>
 
-#include <javelin/block.h>      // only for init, without defining MAJOR_DEVICE_NUMBER
-#include <javelin/char.h>
+#include <javelin/drivers/block.h>      // only for init, without defining MAJOR_DEVICE_NUMBER
+#include <javelin/drivers/char.h>
+
+// drivers
+#include <javelin/drivers/serialPort.h>
+#include <javelin/drivers/screen.h>
+#include <javelin/drivers/terminal.h>
 
 #define UPPER_MEMORY_KB     (*(unsigned short *) 0x90002)       // memory upper 1 MB in KB
 
@@ -61,6 +66,10 @@ void main() {
     setIDTHandlers();
     blockDeviceInit();
     charDeviceInit();
+
+    serialPortInit();
+    screenInit();
+    terminalInit();
 
     for(;;)
         ;
