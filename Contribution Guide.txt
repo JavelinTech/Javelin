@@ -1,6 +1,6 @@
 To contribute to Javelin you must respect code convention rules and contribution rules.
 
-Changes to Javelin must be send by git patches by pull requests. First you must clone Javelin's repository, push changes to it and then make a pull request to official repository.
+Changes to Javelin must be send by git patches by pull requests. First you must fork Javelin's repository, push changes to it and then make a pull request to official repository.
 
 After you sent the patch, the patch will be posted to the post list, and developers on that list reply with any comments they may have.
 
